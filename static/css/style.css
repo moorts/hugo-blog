@@ -103,8 +103,8 @@ article.single section,
 .article-list article {
   background-color: var(--base07);
   color: var(--base00);
-  padding-left: 8rem;
-  padding-right: 8rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
@@ -387,7 +387,6 @@ article.single h1.headline {
 }
 
 article.single section.body {
-  padding-top: 4rem;
   padding-bottom: 3rem;
 }
 
@@ -447,12 +446,9 @@ article.single p code {
 article.single figure,
 article.single div.highlight {
   box-sizing: border-box;
-  max-width: 52rem;
   width: 52rem;
-  margin-left: -8rem;
   margin-right: -8rem;
   margin-bottom: 1rem;
-  padding: 1em;
   background-color: var(--base01);
 }
 
