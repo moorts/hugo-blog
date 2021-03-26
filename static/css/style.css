@@ -524,6 +524,17 @@ article.single hr {
   border-bottom-color: var(--base04);
 }
 
+/*
+ * My styles
+ */
+.fab:hover {
+  color: var(--base0d);
+}
+.links:link,
+.links:visited {
+  color: var(--base07);
+}
+
 /* Pygments template by Jan T. Sott (https://github.com/idleberg) */
 
 pre {
