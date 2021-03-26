@@ -3,7 +3,7 @@ title: "Greatest common divisor"
 date: 2021-03-26T01:22:19+01:00
 summary: "A proof for the euclidean algorithm"
 categories: ["Mathematics", "Cryptography"]
-draft: false
+draft: true
 ---
 
 # Proof of the euclidean algorithm
