@@ -7,10 +7,11 @@ math = true
 
 [params]
     author = "Moritz Gutfleisch"
-    description = "hello there"
+    description = "Hello there"
 
 [menu]
 
-    [[menu.main]]
-        identifier = "about"
-        name = "About"
+#    [[menu.main]]
+#        identifier = "about"
+#        name = "About"
+#        url = "
