@@ -7,11 +7,20 @@
 </footer>
 <script>
   MathJax = {
+    loader: {load: ['[tex]/tagformat']},
     tex: {
       inlineMath: [['$', '$'], ['\\(', '\\)']],
       displayMath: [['$$','$$'], ['\\[', '\\]']],
       processEscapes: true,
-      processEnvironments: true
+      processEnvironments: true,
+      packages: {'[+]': ['tagformat']},
+      tags: 'ams',
+      tagformat: {
+         number: (n) => n.toString(),
+         tag:    (tag) => '(' + tag + ')',
+         id:     (id) => 'mjx-eqn-' + id.replace(/\s/g, '_'),
+         url:    (id, base) => base + '#' + encodeURIComponent(id),
+       },
     },
     options: {
       skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
