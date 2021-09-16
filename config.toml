@@ -1,6 +1,6 @@
 baseURL = "https://moorts.github.io/"
 languageCode = "en-us"
-title = "Moorts' Blog"
+title = "Moorts' Stuff"
 theme = "hyde"
 # pygmentsUseClasses=true
 math = true
