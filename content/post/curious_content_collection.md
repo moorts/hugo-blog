@@ -10,3 +10,7 @@ draft: true
 + [Macros]({{< relref "malignant_macro_mass.md" >}})
 + [Torque]({{< relref "turbulent_torque.md" >}})
 + [Maps]({{< relref "mysterious_maps.md" >}})
++ [Genesis]({{< relref "genesis.md" >}})
++ [Snapshot]({{< relref "snappy_snapshot.md" >}})
++ [Strings]({{< relref "strange-strings.md" >}})
++ [Heap]({{< relref "heap.md" >}})

@@ -6,7 +6,7 @@ categories: []
 draft: true
 ---
 
-**Disclaimer:** The title is addressing my own obliviousness, to how Objects work in V8.
+**Disclaimer:** The title is addressing my own obliviousness to how Objects work in V8.
 
 All JavaScript objects in V8 inherit from `Object` ([src](https://chromium.googlesource.com/v8/v8/+/refs/heads/main/src/objects/objects.h)), which, in turn, inherits from `TaggedImpl`.
 
@@ -33,6 +33,10 @@ class TaggedImpl {
 + `IsStrong()`: True if strong pointer to HeapObject
 
 Also contains some functions to obtain the underlying HeapObject, if one such is present.
+
+### The 'Tag' in 'TaggedImpl'
+
+V8 discerns strong and weak pointers. Data pointed to by at least one strong pointer will not be freed by the garbage collector. Wheter or not there are weak pointers referencing the data is irrelevant. V8 uses [pointer tagging](https://en.wikipedia.org/wiki/Tagged_pointer) to differentiate weak from strong pointers and `Smi`s (small integers) from `HeapObjects`. For this, the two LSBs of a pointer are used. If the LSB is 1, the pointer references a heap object, otherwise a small integer. If the next bit is 0, it is a strong pointer, otherwise a weak one.
 
 ## Object
 

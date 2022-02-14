@@ -12,6 +12,7 @@ Cheatsheet for Torque or whatever.
 
 + `BUILD.gn` (torque_files, sources)
 + `src/init/boostrapper.cc` (JS function, class, etc. definitions - link C++/torque to JS)
++ `src/heap/factory.cc` and `src/heap/factory-base.cc` (Constructors/Allocators and stuff)
 
 ## Keyword Summary
 
@@ -27,3 +28,14 @@ transitioning javascript builtin NameOfBuiltin(js-implicit context: NativeContex
     ...
 }
 ```
+
+## Torque Compilation Output
+
+When a `.tq` file is compiled, 5 output files are generated:
+
++ `file-tq.inc` (Class declarations of `TorqueGeneratedYourClassName` (and `YourClassName` if `@export`))
++ `file-tq-inl.inc` (Implementations of member functions)
++ `file-tq.cc` (Class verifiers (and possibly printers, not sure))
+
++ `file-tq-csa.h` (Functions/macros not belonging to a class)
++ `file-tq-csa.cc` (Implementations of the functions declared in header)
